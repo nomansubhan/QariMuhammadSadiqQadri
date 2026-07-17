@@ -1,0 +1,211 @@
+/* Full Page Background */
+body {
+    margin: 0;
+    padding: clamp(10px, 3vw, 20px);
+    box-sizing: border-box;
+    background-color: #00e63d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Outer Container Centering */
+.banner-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Black Rounded Frame with Gold Border */
+.main-badge {
+    position: relative;
+    width: min(450px, 100%);
+    min-height: clamp(360px, 80vh, 450px);
+    background: #000000;
+    border: 8px solid #ffd700;
+    border-radius: 65px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(16px, 4vw, 24px);
+    box-sizing: border-box;
+}
+
+/* Golden Islamic Arch Structure */
+.islamic-arch {
+    position: relative;
+    width: min(280px, 78%);
+    height: clamp(170px, 38vw, 200px);
+    margin-top: 18px;
+    border: 10px solid #ffd700;
+    border-bottom: none;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: visible;
+}
+
+/* Center Profile Image Handling */
+.profile-image img {
+    width: min(100%, 220px);
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    z-index: 2;
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    margin-bottom: -40px;
+    display: block;
+}
+
+/* Shiny Gold Flare Effect */
+.light-flare {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 120px;
+    height: 6px;
+    background: linear-gradient(90deg, transparent, #ffffff, #ffd700, transparent);
+    transform: rotate(-35deg);
+    box-shadow: 0 0 20px #ffd700, 0 0 40px #ffffff;
+    opacity: 0.85;
+}
+
+/* Urdu Typography Formatting */
+.urdu-title {
+    color: #ffffff;
+    font-size: clamp(22px, 5vw, 44px);
+    font-weight: 700;
+    margin: 56px 0 10px 0;
+    text-align: center;
+    direction: rtl;
+    line-height: 1.4;
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'AlQalam Taj Nastaleeq', serif;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Lower Row Styling */
+.follow-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto;
+    margin-bottom: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Yellow Follow Text Settings */
+.follow-text {
+    color: #fff200;
+    font-size: clamp(16px, 4vw, 26px);
+    font-weight: 900;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+/* Social Buttons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.icon:hover {
+    transform: scale(1.15);
+}
+
+.tiktok { background-color: #000000; border: 1.5px solid #ffffff; }
+.facebook { background-color: #3b5998; }
+.youtube { background-color: #ff0000; }
+.whatsapp { background-color: #25d366; }
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .main-badge {
+        min-height: auto;
+        padding: 16px 12px 20px;
+        border-radius: 36px;
+    }
+
+    .islamic-arch {
+        width: 84%;
+        height: 170px;
+        margin-top: 15px;
+    }
+
+    .profile-image img {
+        width: 90%;
+        margin-bottom: -35px;
+    }
+
+    .light-flare {
+        top: 14px;
+        right: 20px;
+        width: 80px;
+        height: 5px;
+    }
+
+    .urdu-title {
+        margin: 44px 0 8px;
+    }
+
+    .follow-section {
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .main-badge {
+        border-width: 6px;
+        border-radius: 28px;
+    }
+
+    .urdu-title {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .follow-section {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+}
