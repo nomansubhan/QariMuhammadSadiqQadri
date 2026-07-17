@@ -63,6 +63,7 @@ body {
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     margin-bottom: -40px;
+    margin-left: 35px;
     display: block;
 }
 
